@@ -5,8 +5,6 @@ import time
 import h5py
 import os, shutil
 from scipy.interpolate import RegularGridInterpolator
-#import functions.helpers.arrays3d as helparrays
-#import functions.sem.geology as geol
 
 
 ### TEXT HELPER FUNCTIONS ###
