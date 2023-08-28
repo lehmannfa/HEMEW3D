@@ -1,4 +1,6 @@
 import numpy as np
+from scipy.signal import butter, filtfilt
+import pandas as pd
 
 
 def compute_moment_tensor(strike, dip, rake, M0):
@@ -46,3 +48,25 @@ def spice_bench(t, fc):
     fc: scaling frequency
     '''
     return 1-(1+t*fc)*np.exp(-t*fc)
+
+
+
+def butter_lowpass_filter(data, cutoff, dt=0.01, order=4):
+    ''' data: array of pd.Series
+    cutoff: cutoff frequency [Hz]
+    dt: sampling step
+    order: filter order '''
+    if isinstance(data, pd.Series):
+        idx = data.index
+        
+    fs = 1/dt # sample rate
+    nyq = 0.5*fs # Nyquist frequency
+    normal_cutoff = cutoff/nyq
+    # Get the filter coefficients
+    b, a = butter(order, normal_cutoff, btype='low', analog=False)
+    y=filtfilt(b,a,data)
+    
+    if isinstance(data, pd.Series):
+        return pd.Series(y, index=idx)
+    
+    return y
