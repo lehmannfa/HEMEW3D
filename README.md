@@ -1,4 +1,4 @@
-This repository contains the code to print materials and velocity fields downloaded from the HEMEW-3D repository [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2FLAI6YU&version=DRAFT). Additional data can also be created following the notebook `Create_materials.ipynb`. 
+This repository contains the code to print materials and velocity fields downloaded from the HEMEW-3D repository [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2FLAI6YU&version=DRAFT). Additional data can also be created following the notebook [Create_materials.ipynb](Create_materials.ipynb). 
 
 This repository also allows to train 4 neural operators using the HEMEW-3D dataset : Fourier Neural Operator (FNO), U-shaped Neural Operator (U-NO), Group-equivariant Fourier Neural Operator (G-FNO), Factorized Fourier Neural Operator (F-FNO). Pre-processing, training, and post-processing is described below.  
 
@@ -51,4 +51,4 @@ Models FNO, U-NO, G-FNO, and F-FNO can be trained with the default options by ru
 
 
 # 5. Post-processing
-To print loss history, model predictions under the form of timeseries of snapshots, use the notebook `Neural_Operators_Predictions.ipynb`. For detailled metrics of the neural operators performances, the notebook `Intensity_Measures.ipynb` computes Root Mean Squared Error (RMSE), Peak Ground Velocity (PGV), Cumulative Absolute Velocity (CAV), Relative Significant Duration (RSD), and Fourier coefficients in three frequency ranges. 
+To print loss history, model predictions under the form of timeseries of snapshots, use the notebook [Neural_Operators_Predictions.ipynb](Neural_Operator_Prediction.ipynb). For detailled metrics of the neural operators performances, the notebook [Intensity_Measures.ipynb](Intensity_Measures.ipynb) computes Root Mean Squared Error (RMSE), Peak Ground Velocity (PGV), Cumulative Absolute Velocity (CAV), Relative Significant Duration (RSD), and Fourier coefficients in three frequency ranges. 
