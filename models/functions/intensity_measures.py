@@ -5,7 +5,7 @@ from scipy.fft import rfft, rfftfreq
 def score_metric(metric1, metric2, method='exponential'):
     ''' metric1: float or 1D-array of floats, metrics of the ground truth
     metric2: float or 1D-array of floats, metrics of the prediction
-    method: string, exponential or percentage, to define the score
+    method: string, exponential, bias or percentage, to define the score
     
     output: same shape as metric1 and metric2, score assessing the difference between the two metrics '''
 
@@ -13,11 +13,14 @@ def score_metric(metric1, metric2, method='exponential'):
         min_metric = np.where(metric1<metric2, metric1, metric2) # min of metric1 and metric2
         score = 10*np.exp(-((metric1 - metric2)/min_metric)**2)
 
+    elif method == 'bias':
+        score = (metric2 - metric1)/metric1
+
     elif method == 'percentage':
         score = 100*(metric2 - metric1)/metric1
 
     else:
-        raise Exception(f"method '{method}' is not defined, choose between 'exponential' and 'percentage'")
+        raise Exception(f"method '{method}' is not defined, choose between 'exponential', 'bias' and 'percentage'")
     return score
 
 
