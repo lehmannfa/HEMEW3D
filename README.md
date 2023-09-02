@@ -1,4 +1,4 @@
-This repository contains the code to print materials and velocity fields downloaded from the HEMEW-3D repository [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2FLAI6YU&version=DRAFT). Additional data can also be created following the notebook [Create_materials.ipynb](Create_materials.ipynb). 
+This repository contains the code to print materials and velocity fields downloaded from the HEMEW-3D repository [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU). Additional data can also be created following the notebook [Create_materials.ipynb](Create_materials.ipynb). 
 
 This repository also allows to train 4 neural operators using the HEMEW-3D dataset : Fourier Neural Operator (FNO), U-shaped Neural Operator (U-NO), Group-equivariant Fourier Neural Operator (G-FNO), Factorized Fourier Neural Operator (F-FNO). Pre-processing, training, and post-processing is described below.  
 
@@ -12,7 +12,7 @@ Materials contain the values of shear-waves velocity. The minimum value is 1071m
 ### Practical use
 Materials are provided as `.npy` arrays, readable with python: `a = np.load(‘materials0-1999.npy’)`
 Each file contains 2000 materials. Therefore, `a` is of shape (2000, 32, 32, 32). Indices correspond to the material index, the x coordinate (from West to East), the y coordinate (from South to North), and the z coordinate (from bottom to top). 
-The 15 materials files amount to 3.9GB. They are downloadable individually on [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2FLAI6YU&version=DRAFT). A batch of 10 materials is given in the `data` folder for illustration purposes.  
+The 15 materials files amount to 3.9GB. They are downloadable individually on [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU). A batch of 10 materials is given in the `data` folder for illustration purposes.  
 Metadata are given in the `data` folder. They contain the minimum, mean, maximum and standard deviation of each material. 
 
 
@@ -33,7 +33,7 @@ Results are given in .feather dataframes, readable with pandas library in Python
 
 where `run` indicates the index of the material used in this simulation, `field` indicates the component of the velocity field (`Veloc E` for East-West, `Veloc N` for North-South, `Veloc Z` for Vertical). `x`, `y`, `z` are the coordinates of the sensor (in meters). The next 2000 columns contain the velocity field for times 0, 0.01, …, 19.99.
 
-The 300 velocity fields files amount to 369.9 GB. They are downloadable individually (1.2 GB per file) on [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi%3A10.57745%2FLAI6YU&version=DRAFT). A batch of velocity fields corresponding to 10 materials is given in the `data` folder for illustration purposes.
+The 300 velocity fields files amount to 369.9 GB. They are downloadable individually (1.2 GB per file) on [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU). A batch of velocity fields corresponding to 10 materials is given in the `data` folder for illustration purposes.
 
 Metadata are given in the `data` folder. They contain the first wave arrival time at the surface, the minimum, mean, and maximum Peak Ground Velocity.
 
