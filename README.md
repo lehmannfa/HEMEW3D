@@ -7,6 +7,7 @@ This repository also allows to train 4 neural operators using the HEMEW-3D datas
 The HEMEW-3D and HEMEW^S-3D datasets contain 30,000 simulation results of the 3D elastic wave equation. Results have been obtained with the earthquake simulator [SEM3D](https://github.com/sem3d/SEM). This equation governs the propagation of waves in a 3D propagation medium (also called material in the following). Two types of data are given in the datasets. 
 
 |Version | Version 1 (HEMEW-3D) | Version 2 (HEMEW^S-3D) |
+| -- | -- | -- |
 |Link to data | (https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU&version=1.0) | https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU&version=2.1|
 |Documentation | [HEMEW-3D.pdf](https://github.com/lehmannfa/HEMEW3D/blob/main/HEMEW-3D.pdf) | [HEMEW^S-3D.pdf](https://github.com/lehmannfa/HEMEW3D/blob/main/HEMEW%5ES-3D.pdf)|
 
@@ -31,6 +32,7 @@ The second type of data is the collection of surface velocity fields. They have 
 > Computational details: The computational mesh was designed with elements of size 300m and 7 Gauss-Lobato-Legendre quadrature points. It can accurately represent the propagation of waves up to 5Hz frequency.
 
 | Version | Version 1 (HEMEW-3D) | Version 2 (HEMEW^S-3D) |
+| -- | -- | -- |
 | Virtual sensors | Velocity fields were recorded by a grid of 16 x 16 virtual sensors located at the surface of the propagation domain between 150m and 9450m (620m between consecutive sensors). | Velocity fields were recorded by a grid of 32 x 32 virtual sensors located at the surface of the propagation domain between 150m and 9450m (300m between consecutive sensors). |
 | Temporal sampling | Each sensor records the 3-component velocity with a 100Hz sampling. | Each sensor records the 3-component velocity with a 100Hz sampling. |
 | Duration | 20 seconds | 8 seconds (enough to contain significant ground motion) |
