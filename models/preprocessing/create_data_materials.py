@@ -27,7 +27,7 @@ folder_name = f'inputs3D_S{S_in}_Z{S_in_z}_T{Nt}_fmax{fmax}'
 
 # Load materials
 data_a = np.load(path_a + 'materials0-9.npy')
-data_a = data_a[Irun0:Irun0+Ntrain+Nval]
+data_a = data_a[Irun0:Irun0+Ntrain+Nval, :32, :32, :32]
 data_a = data_a.astype(np.float32)
 
 # Save data to individual .h5 files
