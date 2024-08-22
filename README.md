@@ -76,3 +76,47 @@ Models FNO, U-NO, G-FNO, and F-FNO can be trained with the default options by ru
 
 # 5. Post-processing
 To print loss history, model predictions under the form of timeseries of snapshots, use the notebook [Neural_Operators_Predictions.ipynb](Neural_Operator_Prediction.ipynb). For detailled metrics of the neural operators performances, the notebook [Intensity_Measures.ipynb](Intensity_Measures.ipynb) computes Root Mean Squared Error (RMSE), Peak Ground Velocity (PGV), Cumulative Absolute Velocity (CAV), Relative Significant Duration (RSD), and Fourier coefficients in three frequency ranges. 
+
+
+# How to cite?
+If you use the HEMEW-3D or HEMEW^S-3D database, please cite 
+```
+@data{LAI6YU_2023,
+author = {Lehmann, Fanny},
+publisher = {Recherche Data Gouv},
+title = {{Physics-based Simulations of 3D Wave Propagation with Source Variability: HEMEW^S-3D}},
+UNF = {UNF:6:8PCZ8VjJPJx1izlFPoWW2g==},
+year = {2023},
+version = {V2},
+doi = {10.57745/LAI6YU},
+url = {https://doi.org/10.57745/LAI6YU}
+}
+```
+and
+```
+@article{essd-2023-470,
+author = {Lehmann, F. and Gatti, F. and Bertin, M. and Clouteau, D.},
+title = {Synthetic ground motions in heterogeneous geologies: the HEMEW-3D dataset for scientific machine learning},
+journal = {Earth System Science Data Discussions},
+volume = {2024},
+year = {2024},
+pages = {1--26},
+url = {https://essd.copernicus.org/preprints/essd-2023-470/},
+doi = {10.5194/essd-2023-470}
+}
+```
+
+If you use neural operators from this work, please cite
+```
+@article{LEHMANN2024116718,
+title = {3D elastic wave propagation with a Factorized Fourier Neural Operator (F-FNO)},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+volume = {420},
+pages = {116718},
+year = {2024},
+issn = {0045-7825},
+doi = {https://doi.org/10.1016/j.cma.2023.116718},
+url = {https://www.sciencedirect.com/science/article/pii/S0045782523008411},
+author = {Fanny Lehmann and Filippo Gatti and Michaël Bertin and Didier Clouteau},
+}
+```
