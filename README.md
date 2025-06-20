@@ -19,7 +19,7 @@ Materials contain the values of shear-wave velocity. The minimum value is 1071m/
 ### Practical use
 Materials are provided as `.npy` arrays, readable with python: `a = np.load(‘materials0-1999.npy’)`
 Each file contains 2000 materials. Therefore, `a` is of shape (2000, 32, 32, 32). Indices correspond to the material index, the x coordinate (from West to East), the y coordinate (from South to North), and the z coordinate (from bottom to top). 
-The 15 materials files amount to 3.9GB. They are downloadable individually on [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU). A batch of 10 materials is given in the `data` folder for illustration purposes.  
+The 15 materials files amount to 3.9GB. They are downloadable individually on [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU). After download, they should be place in the `data` folder.  
 *Note: Although the principles are similar to design materials in both versions of the dataset, a new set of 30,000 materials was designed for the second version. Therefore, one must not use materials of the first version to predict the velocity fields of the second version.*
 
 For version 1: Metadata are given in the `data` folder. They contain the minimum, mean, maximum and standard deviation of each material. 
