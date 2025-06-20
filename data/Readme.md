@@ -1,1 +1,1 @@
-This folder contains metadata for materials and velocity fields datasets. Data downloaded from the [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU) repository should be added here to replace `materials0-9.npy' and `velocity0.feather, ..., `velocity9.feather'
+This folder contains metadata for materials and velocity fields datasets. Data downloaded from the [Recherche Data Gouv](https://entrepot.recherche.data.gouv.fr/dataset.xhtml?persistentId=doi:10.57745/LAI6YU) repository should be placed here.
